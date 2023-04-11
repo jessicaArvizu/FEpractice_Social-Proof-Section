@@ -24,7 +24,7 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 100%;
-    padding: 5%;
+    padding: 100px;
 
 
     section {
@@ -43,7 +43,7 @@ main {
                 .col-right {
                     .info-ratings {
                         border-radius: 12px;
-                        padding: 15px;
+                        padding: 10px;
                         background-color: $lightGrayishMagenta;
                         margin-bottom: 15px;
 
@@ -56,26 +56,45 @@ main {
             }
 
             .bottom-row {
+                padding: 20px;
+
                 .info-col {
+
                     .info-container {
                         background-color: $veryDarkMagenta;
                         padding: 30px;
                         border-radius: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        font-weight: 500;
 
-                        .info-buyer-img {
-                            border-radius: 100px;
+                        .info-container-header {
+                            display:flex;
+                            align-items: center;
+
+                            .info-buyer-img {
+                                border-radius: 100px;
+                                margin-right: 20px;
+                                width: 60px;
+                            }
+
+                            .info-name {
+                                color: $lightGrayishMagenta;
+                                margin:0;
+                            }
+
+                            .info-buyer {
+                                color: $softPink;
+                                margin:0;
+                            }
                         }
 
-                        .info-name {
-                            color: $white;
-                        }
+                        .info-container-body {
 
-                        .info-buyer {
-                            color: $softPink;
-                        }
-
-                        .info-text {
-                            color: $white;
+                            .info-text {
+                                margin-top: 30px;
+                                color: $lightGrayishMagenta;
+                            }
                         }
                     }
                 }
@@ -101,6 +120,8 @@ footer {
     main {
 
         section {
+            text-align: center;
+
             .main-container {
                 .top-row {
                     .col-left {}
@@ -121,6 +142,8 @@ footer {
     main {
 
         section {
+            text-align: center;
+
             .main-container {
                 .top-row {
                     .col-left {}
