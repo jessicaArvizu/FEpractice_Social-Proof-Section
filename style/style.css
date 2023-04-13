@@ -8,59 +8,78 @@
   color: hsl(300, 43%, 22%);
 }
 
-main {
+body {
+  width: 100%;
   background-color: hsl(0, 0%, 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100%;
   padding: 100px;
 }
-main section .main-container .top-row .col-left h1 {
+
+/*main {
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 100px;
+}*/
+#top-section {
+  width: 100%;
+}
+#top-section .main-container-top .top-row {
+  margin-bottom: 50px;
+}
+#top-section .main-container-top .top-row .col-left h1 {
   font-weight: 900;
 }
-main section .main-container .top-row .col-left .description-text {
+#top-section .main-container-top .top-row .col-left .description-text {
   color: hsl(303, 10%, 53%);
 }
-main section .main-container .top-row .col-right .info-ratings {
+#top-section .main-container-top .top-row .col-right .info-ratings {
   border-radius: 12px;
   padding: 10px;
   background-color: hsl(300, 24%, 96%);
   margin-bottom: 15px;
 }
-main section .main-container .top-row .col-right .info-ratings p {
+#top-section .main-container-top .top-row .col-right .info-ratings p {
   margin: 0;
   font-weight: 900;
 }
-main section .main-container .bottom-row {
-  padding: 20px;
+
+#bottom-section {
+  width: 100%;
 }
-main section .main-container .bottom-row .info-col .info-container {
+#bottom-section .main-container-bottom {
+  width: 100%;
+}
+#bottom-section .main-container-bottom .bottom-row .info-col .info-container {
   background-color: hsl(300, 43%, 22%);
   padding: 30px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   font-weight: 500;
+  height: 100%;
 }
-main section .main-container .bottom-row .info-col .info-container .info-container-header {
+#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-header {
   display: flex;
   align-items: center;
 }
-main section .main-container .bottom-row .info-col .info-container .info-container-header .info-buyer-img {
+#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-header .info-buyer-img {
   border-radius: 100px;
   margin-right: 20px;
   width: 60px;
 }
-main section .main-container .bottom-row .info-col .info-container .info-container-header .info-name {
+#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-header .info-name {
   color: hsl(300, 24%, 96%);
   margin: 0;
 }
-main section .main-container .bottom-row .info-col .info-container .info-container-header .info-buyer {
+#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-header .info-buyer {
   color: hsl(333, 80%, 67%);
+  font-weight: 400;
   margin: 0;
 }
-main section .main-container .bottom-row .info-col .info-container .info-container-body .info-text {
+#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-body .info-text {
   margin-top: 30px;
   color: hsl(300, 24%, 96%);
 }
@@ -75,21 +94,53 @@ footer .attribution a {
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
+  main {
+    padding: 30px;
+  }
   main section {
     text-align: center;
+  }
+  main section .main-container .top-row {
+    margin-bottom: 30px;
   }
   main section .main-container .top-row .col-right .info-ratings {
     align-items: center;
     text-align: center;
+  }
+  main section .main-container .bottom-row {
+    padding: 0;
+  }
+  main section .main-container .bottom-row .info-col {
+    margin: 0;
+    padding: 0;
+  }
+  main section .main-container .bottom-row .info-col .info-container {
+    padding: 20px;
   }
 }
 @media only screen and (max-width: 320px) {
+  main {
+    padding: 30px;
+  }
   main section {
     text-align: center;
+  }
+  main section .main-container .top-row {
+    margin-bottom: 30px;
   }
   main section .main-container .top-row .col-right .info-ratings {
     align-items: center;
     text-align: center;
+  }
+  main section .main-container .bottom-row {
+    padding: 0;
+  }
+  main section .main-container .bottom-row .info-col {
+    margin: 0;
+    padding: 0;
+  }
+  main section .main-container .bottom-row .info-col .info-container {
+    padding: 20px;
   }
 }
 
