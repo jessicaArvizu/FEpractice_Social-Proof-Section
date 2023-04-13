@@ -13,21 +13,16 @@ body {
   background-color: hsl(0, 0%, 100%);
   min-height: 100%;
   padding: 100px;
+  background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
 }
 
-/*main {
-    background-color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-    padding: 100px;
-}*/
 #top-section {
   width: 100%;
 }
 #top-section .main-container-top .top-row {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 #top-section .main-container-top .top-row .col-left h1 {
   font-weight: 900;
@@ -35,15 +30,26 @@ body {
 #top-section .main-container-top .top-row .col-left .description-text {
   color: hsl(303, 10%, 53%);
 }
+#top-section .main-container-top .top-row .col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
 #top-section .main-container-top .top-row .col-right .info-ratings {
   border-radius: 12px;
   padding: 10px;
   background-color: hsl(300, 24%, 96%);
   margin-bottom: 15px;
+  width: 90%;
 }
 #top-section .main-container-top .top-row .col-right .info-ratings p {
   margin: 0;
   font-weight: 900;
+}
+#top-section .main-container-top .top-row .col-right .info-ratings .col-stars,
+#top-section .main-container-top .top-row .col-right .info-ratings .col-text {
+  width: fit-content;
 }
 
 #bottom-section {
@@ -51,6 +57,11 @@ body {
 }
 #bottom-section .main-container-bottom {
   width: 100%;
+}
+#bottom-section .main-container-bottom .bottom-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 #bottom-section .main-container-bottom .bottom-row .info-col .info-container {
   background-color: hsl(300, 43%, 22%);
@@ -83,63 +94,66 @@ body {
   margin-top: 30px;
   color: hsl(300, 24%, 96%);
 }
-
-footer .attribution {
-  font-size: 11px;
-  text-align: center;
+#bottom-section .main-container-bottom .bottom-row .info-col .info-center {
+  margin-top: 10%;
 }
-footer .attribution a {
-  color: hsl(228, 45%, 44%);
+#bottom-section .main-container-bottom .bottom-row .info-col .info-bottom {
+  margin-top: 20%;
 }
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
-  main {
+  #top-section .main-container-top {
     padding: 30px;
   }
-  main section {
-    text-align: center;
-  }
-  main section .main-container .top-row {
+  #top-section .main-container-top .top-row {
     margin-bottom: 30px;
   }
-  main section .main-container .top-row .col-right .info-ratings {
+  #top-section .main-container-top .top-row .col-right .info-ratings {
     align-items: center;
     text-align: center;
   }
-  main section .main-container .bottom-row {
+  #bottom-section .main-container-bottom .bottom-row {
     padding: 0;
   }
-  main section .main-container .bottom-row .info-col {
+  #bottom-section .main-container-bottom .bottom-row .info-col {
     margin: 0;
     padding: 0;
   }
-  main section .main-container .bottom-row .info-col .info-container {
+  #bottom-section .main-container-bottom .bottom-row .info-col .info-container {
     padding: 20px;
   }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 425px) {
+  body {
+    padding: 20px;
+    text-align: center;
+  }
   main {
-    padding: 30px;
-  }
-  main section {
-    text-align: center;
-  }
-  main section .main-container .top-row {
-    margin-bottom: 30px;
-  }
-  main section .main-container .top-row .col-right .info-ratings {
-    align-items: center;
-    text-align: center;
-  }
-  main section .main-container .bottom-row {
-    padding: 0;
-  }
-  main section .main-container .bottom-row .info-col {
     margin: 0;
     padding: 0;
   }
-  main section .main-container .bottom-row .info-col .info-container {
+  main #top-section .main-container-top {
+    padding: 10px 0 10px 0;
+    text-align: center;
+    margin: 50px 10px 0 10px;
+  }
+  main #top-section .main-container-top .top-row {
+    margin-bottom: 30px;
+  }
+  main #top-section .main-container-top .top-row .col-right .info-ratings {
+    width: 100% !important;
+    text-align: center;
+    align-self: start !important;
+  }
+  main #bottom-section .main-container-bottom .bottom-row {
+    padding: 0;
+  }
+  main #bottom-section .main-container-bottom .bottom-row .info-col {
+    margin: 0;
+    padding: 0;
+  }
+  main #bottom-section .main-container-bottom .bottom-row .info-col .info-container {
     padding: 20px;
   }
 }
