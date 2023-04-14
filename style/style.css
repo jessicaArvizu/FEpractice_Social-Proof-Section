@@ -18,52 +18,54 @@ body {
   background-repeat: no-repeat, no-repeat;
 }
 
-#top-section {
-  width: 100%;
-}
-#top-section .main-container-top .top-row {
+main section .main-container-top .top-row {
   margin-bottom: 40px;
 }
-#top-section .main-container-top .top-row .col-left h1 {
+main section .main-container-top .top-row .col-left h1 {
   font-weight: 900;
 }
-#top-section .main-container-top .top-row .col-left .description-text {
+main section .main-container-top .top-row .col-left .description-text {
   color: hsl(303, 10%, 53%);
 }
-#top-section .main-container-top .top-row .col-right {
+main section .main-container-top .top-row .col-right {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-bottom: 20px;
 }
-#top-section .main-container-top .top-row .col-right .info-ratings {
+main section .main-container-top .top-row .col-right .info-ratings {
   border-radius: 12px;
   padding: 10px;
   background-color: hsl(300, 24%, 96%);
   margin-bottom: 15px;
   width: 90%;
 }
-#top-section .main-container-top .top-row .col-right .info-ratings p {
+main section .main-container-top .top-row .col-right .info-ratings p {
   margin: 0;
   font-weight: 900;
 }
-#top-section .main-container-top .top-row .col-right .info-ratings .col-stars,
-#top-section .main-container-top .top-row .col-right .info-ratings .col-text {
+main section .main-container-top .top-row .col-right .info-ratings .col-stars,
+main section .main-container-top .top-row .col-right .info-ratings .col-text {
   width: fit-content;
 }
-
-#bottom-section {
+main section .main-container-top .top-row .col-right .row-start {
+  align-self: flex-start;
+}
+main section .main-container-top .top-row .col-right .row-center {
+  align-self: center;
+}
+main section .main-container-top .top-row .col-right .row-end {
+  align-self: flex-end;
+}
+main section .main-container-bottom {
   width: 100%;
 }
-#bottom-section .main-container-bottom {
-  width: 100%;
-}
-#bottom-section .main-container-bottom .bottom-row {
+main section .main-container-bottom .bottom-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-#bottom-section .main-container-bottom .bottom-row .info-col .info-container {
+main section .main-container-bottom .bottom-row .info-col .info-container {
   background-color: hsl(300, 43%, 22%);
   padding: 30px;
   border-radius: 12px;
@@ -72,89 +74,150 @@ body {
   font-weight: 500;
   height: 100%;
 }
-#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-header {
+main section .main-container-bottom .bottom-row .info-col .info-container .info-container-header {
   display: flex;
   align-items: center;
 }
-#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-header .info-buyer-img {
+main section .main-container-bottom .bottom-row .info-col .info-container .info-container-header .info-buyer-img {
   border-radius: 100px;
   margin-right: 20px;
   width: 60px;
 }
-#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-header .info-name {
+main section .main-container-bottom .bottom-row .info-col .info-container .info-container-header .info-name {
   color: hsl(300, 24%, 96%);
   margin: 0;
 }
-#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-header .info-buyer {
+main section .main-container-bottom .bottom-row .info-col .info-container .info-container-header .info-buyer {
   color: hsl(333, 80%, 67%);
   font-weight: 400;
   margin: 0;
 }
-#bottom-section .main-container-bottom .bottom-row .info-col .info-container .info-container-body .info-text {
+main section .main-container-bottom .bottom-row .info-col .info-container .info-container-body .info-text {
   margin-top: 30px;
   color: hsl(300, 24%, 96%);
 }
-#bottom-section .main-container-bottom .bottom-row .info-col .info-center {
+main section .main-container-bottom .bottom-row .info-col .info-center {
   margin-top: 10%;
 }
-#bottom-section .main-container-bottom .bottom-row .info-col .info-bottom {
+main section .main-container-bottom .bottom-row .info-col .info-bottom {
   margin-top: 20%;
 }
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
-  #top-section .main-container-top {
-    padding: 30px;
-  }
-  #top-section .main-container-top .top-row {
-    margin-bottom: 30px;
-  }
-  #top-section .main-container-top .top-row .col-right .info-ratings {
-    align-items: center;
+  body {
+    padding: 20px;
     text-align: center;
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
   }
-  #bottom-section .main-container-bottom .bottom-row {
-    padding: 0;
-  }
-  #bottom-section .main-container-bottom .bottom-row .info-col {
+  main {
     margin: 0;
     padding: 0;
   }
-  #bottom-section .main-container-bottom .bottom-row .info-col .info-container {
+  main section .main-container-top {
+    padding: 10px 0 10px 0;
+    text-align: center;
+    margin: 50px 10px 0 10px;
+  }
+  main section .main-container-top .top-row {
+    margin-bottom: 30px;
+  }
+  main section .main-container-top .top-row .col-right .info-ratings {
+    width: 100% !important;
+    text-align: center;
+    align-self: start !important;
+  }
+  main section .main-container-top .top-row .col-right .info-ratings .col-stars,
+  main section .main-container-top .top-row .col-right .info-ratings .col-text {
+    width: 100%;
+  }
+  main section .main-container-top .top-row .col-right .row-start {
+    align-self: center;
+    text-align: center;
+  }
+  main section .main-container-top .top-row .col-right .row-center {
+    align-self: center;
+    text-align: center;
+  }
+  main section .main-container-top .top-row .col-right .row-end {
+    align-self: center;
+    text-align: center;
+  }
+  main section .main-container-bottom .bottom-row {
+    padding: 0;
+  }
+  main section .main-container-bottom .bottom-row .info-col {
+    margin-bottom: 5px !important;
+    height: 100%;
+  }
+  main section .main-container-bottom .bottom-row .info-col .info-container {
     padding: 20px;
+  }
+  main section .main-container-bottom .bottom-row .info-col .info-center {
+    margin-top: 10px !important;
+  }
+  main section .main-container-bottom .bottom-row .info-col .info-bottom {
+    margin-top: 10px !important;
   }
 }
 @media only screen and (max-width: 425px) {
   body {
     padding: 20px;
     text-align: center;
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
   }
   main {
     margin: 0;
     padding: 0;
   }
-  main #top-section .main-container-top {
+  main section .main-container-top {
     padding: 10px 0 10px 0;
     text-align: center;
     margin: 50px 10px 0 10px;
   }
-  main #top-section .main-container-top .top-row {
+  main section .main-container-top .top-row {
     margin-bottom: 30px;
   }
-  main #top-section .main-container-top .top-row .col-right .info-ratings {
+  main section .main-container-top .top-row .col-right .info-ratings {
     width: 100% !important;
     text-align: center;
     align-self: start !important;
   }
-  main #bottom-section .main-container-bottom .bottom-row {
+  main section .main-container-top .top-row .col-right .info-ratings .col-stars,
+  main section .main-container-top .top-row .col-right .info-ratings .col-text {
+    width: 100%;
+  }
+  main section .main-container-top .top-row .col-right .row-start {
+    align-self: center;
+    text-align: center;
+  }
+  main section .main-container-top .top-row .col-right .row-center {
+    align-self: center;
+    text-align: center;
+  }
+  main section .main-container-top .top-row .col-right .row-end {
+    align-self: center;
+    text-align: center;
+  }
+  main section .main-container-bottom .bottom-row {
     padding: 0;
   }
-  main #bottom-section .main-container-bottom .bottom-row .info-col {
-    margin: 0;
-    padding: 0;
+  main section .main-container-bottom .bottom-row .info-col {
+    margin-bottom: 5px !important;
+    height: 100%;
   }
-  main #bottom-section .main-container-bottom .bottom-row .info-col .info-container {
+  main section .main-container-bottom .bottom-row .info-col .info-container {
     padding: 20px;
+  }
+  main section .main-container-bottom .bottom-row .info-col .info-center {
+    margin-top: 10px !important;
+  }
+  main section .main-container-bottom .bottom-row .info-col .info-bottom {
+    margin-top: 10px !important;
   }
 }
 
