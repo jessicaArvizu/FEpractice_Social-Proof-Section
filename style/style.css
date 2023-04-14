@@ -23,6 +23,7 @@ main section .main-container-top .top-row {
 }
 main section .main-container-top .top-row .col-left h1 {
   font-weight: 900;
+  font-size: 3rem;
 }
 main section .main-container-top .top-row .col-left .description-text {
   color: hsl(303, 10%, 53%);
@@ -72,7 +73,7 @@ main section .main-container-bottom .bottom-row .info-col .info-container {
   display: flex;
   flex-direction: column;
   font-weight: 500;
-  height: 100%;
+  height: fit-content;
 }
 main section .main-container-bottom .bottom-row .info-col .info-container .info-container-header {
   display: flex;
